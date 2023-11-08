@@ -1,0 +1,19 @@
+{
+  "name": "automailer",
+  "version": "1.0.0",
+  "description": "Automate email responses for your Gmail mailbox during your vacation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrathamPateljava/AutoMailer.git"
+  },
+  "author": "PrathamPateljava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrathamPateljava/AutoMailer/issues"
+  },
+  "homepage": "https://github.com/PrathamPateljava/AutoMailer#readme"
+}
