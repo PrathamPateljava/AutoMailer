@@ -4,7 +4,8 @@
   "description": "Automate email responses for your Gmail mailbox during your vacation.",
   "main": "app.js",
   "scripts": {
-    "test": "npm start"
+    "test": "npm start",
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/PrathamPateljava/AutoMailer/issues"
   },
-  "homepage": "https://github.com/PrathamPateljava/AutoMailer#readme"
+  "homepage": "https://github.com/PrathamPateljava/AutoMailer#readme",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "axios": "^1.6.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^105.0.0",
+    "qs": "^6.11.2"
+  }
 }
