@@ -38,7 +38,7 @@ function isFirstReply(threadId) {
 
   return false;
 }
-async function sendReply(emailId, sender, replyText, updatedSubject) {
+async function sendReply(emailId, sender, replyText, updatedSubject,threadId) {
     try{  
       const message={
         raw:Buffer.from(
@@ -54,7 +54,7 @@ async function sendReply(emailId, sender, replyText, updatedSubject) {
       const sendResponse = await gmail.users.messages.send({
         userId: 'me',
         resource: message,
-        threadId:emailId
+        threadId:threadId
       });
   
       console.log('Reply sent:', sendResponse.data);
@@ -136,11 +136,11 @@ async function checkAndReplyToEmails() {
         const replyText = "Hello,\n\nThank you for your email.\n\n I am currently on vacation and will not be available until 7-12-2023.\N If your matter is urgent, please contact the office at learnit.django@gmail.com. I'll respond to your email upon my return.\n\nBest regards,\nPratham Patel"
         const updatedSubject = 'Out of Office';
 
-        sendReply(email.id, sender, replyText, updatedSubject);
+        sendReply(threadId, sender, replyText, updatedSubject,threadId);
 
         // Add a label to the email and move it
         const labelName = 'INBOX';
-        addLabel(email.id, labelName);
+        addLabel(threadId, labelName);
       }
     }
   } catch (error) {

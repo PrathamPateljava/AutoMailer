@@ -67,7 +67,8 @@ Before getting started with the application, you will need:
 ## Usage
 
 To start the program use:
-```npm start```
+
+```npm start or node ./app.js```
 
 ## Libraries and Technologies
 
